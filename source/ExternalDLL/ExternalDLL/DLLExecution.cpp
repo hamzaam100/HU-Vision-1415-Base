@@ -321,8 +321,10 @@ bool DLLExecution::executeLocalizationStep5(bool student) {
 	}
 	bool succes = false;
 	if (student) {
+		std::cout << "student" << std::endl;
 		succes = studentLocalization.stepFindExactEyes(*resultPreProcessingStep4, featuresScaled);
 	} else {
+		std::cout << "leraar" << std::endl;
 		succes = defaultLocalization.stepFindExactEyes(*resultPreProcessingStep4, featuresScaled);
 	}
 	if (featuresScaled.hasFeature(Feature::FEATURE_EYE_LEFT_RECT)) {

@@ -6,6 +6,8 @@
 
 #pragma once
 #include "Localization.h"
+#include "kernel.h"
+
 class StudentLocalization :
 	public Localization {
 public:

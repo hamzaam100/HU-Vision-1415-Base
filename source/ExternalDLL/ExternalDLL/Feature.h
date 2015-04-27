@@ -36,7 +36,6 @@ public:
 
 
 
-
 	//const static char FEATURE_HEAD_LEFTS = 9;
 	//const static char FEATURE_HEAD_RIGHTS = 10;
 	//const static char FEATURE_NOSE_LEFTS = 11;
