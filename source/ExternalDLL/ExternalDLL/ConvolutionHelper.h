@@ -15,4 +15,3 @@ public:
 
 	static IntensityImage* ConvolveImage(const IntensityImage& image, const Kernel& kernel);
 };
-

@@ -1,4 +1,9 @@
 #include "StudentPreProcessing.h"
+#include "ConvolutionHelper.h"
+#include "Kernel.h"
+#include "ImageFactory.h"
+
+#include "OpenCV\cv.h"
 
 IntensityImage * StudentPreProcessing::stepToIntensityImage(const RGBImage &image) const {
 	IntensityImageStudent * im = new IntensityImageStudent(image.getWidth(), image.getHeight());
@@ -16,16 +21,9 @@ IntensityImage * StudentPreProcessing::stepScaleImage(const IntensityImage &imag
 }
 
 IntensityImage * StudentPreProcessing::stepEdgeDetection(const IntensityImage &image) const {
-	IntensityImageStudent * im = new IntensityImageStudent();
-
-	for (int y = 0; y <= image.getHeight(); y++){
-		for (int x = 0; x <= image.getWidth(); x++){
-			Intensity tmpIntansity = (image.getPixel(x-1, y) + image.getPixel(x+1, y) + (2 * image.getPixel(x, y)))+127;
-
-			im->setPixel(x, y, tmpIntansity);
-		}
-	}
-	return im;
+	int kernelData[] = { 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, -4, -4, -4, 1, 1, 1, 1, 1, 1, -4, -4, -4, 1, 1, 1, 1, 1, 1, -4, -4, -4, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0 };
+	Kernel kernel(9, 9, kernelData);
+	return ConvolutionHelper::ConvolveImage(image, kernel);
 }
 
 IntensityImage * StudentPreProcessing::stepThresholding(const IntensityImage &image) const {
