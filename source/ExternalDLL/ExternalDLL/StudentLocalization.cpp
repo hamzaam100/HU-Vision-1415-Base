@@ -56,7 +56,6 @@ bool StudentLocalization::stepFindExactEyes(const IntensityImage &image, Feature
 	std::cout << "================Debug================" << std::endl;
 
 
-	//Known head parameters.
 	Point2D<double> headLeftPoint = features.getFeature(Feature::FEATURE_HEAD_LEFT_NOSE_BOTTOM).getPoints()[0];
 	Point2D<double> headRightPoint = features.getFeature(Feature::FEATURE_HEAD_RIGHT_NOSE_BOTTOM).getPoints()[0];
 	Point2D<double> headTop = features.getFeature(Feature::FEATURE_HEAD_TOP).getPoints()[0];
@@ -65,179 +64,6 @@ bool StudentLocalization::stepFindExactEyes(const IntensityImage &image, Feature
 	Point2D<double> noseEndRight = features.getFeature(Feature::FEATURE_NOSE_END_RIGHT).getPoints()[0];
 
 	Point2D<double> noseBottom = features.getFeature(Feature::FEATURE_NOSE_BOTTOM).getPoints()[0];
-	int headWidth = (int)(headRightPoint.getX() - headLeftPoint.getX());
-
-	//Unknown parameters
-	Point2D<double> featureExactHeadLeft;
-	Point2D<double> featureExactHeadRight;
-
-	
-
-	std::cout << "Hier: " << headLeftPoint << std::endl;
-	std::cout << "Hier: " << headRightPoint << std::endl;
-	std::cout << "Hier: " << noseEndLeft << std::endl;
-	std::cout << "Hier: " << noseEndRight << std::endl;
-
-	
-	int OverHillOverDale = std::max(headWidth / 12, 1);
-	int ThoroughBushThoroughBrier = (int)headLeftPoint.getY();
-	int OverParkOverPale = 0;
-	int ThoroughFloodThoroughFire = image.getWidth();
-	int IDoWanderEverywhere = (int)(headLeftPoint.getX() + (headWidth * 0.20));
-	int SwifterThanTheMoonsSphere = (int)(headLeftPoint.getX() + (headWidth * 0.80));
-	int AndIServeTheFairyQueen = (int)(headWidth / 6.0);
-	Point2D<double> ToDewHerOrbsUponTheGreen;
-	Point2D<double> InTheirGoldCoatsSpotsYouSee;
-	Point2D<double> ThoseBeRubiesFairyFavours;
-	Point2D<double> InThoseFrecklesLiveTheirSavours;
-	//double IMustGoSeekSomeDewdropsHere, AndHangAPearlInEveryCowslipsEar;
-
-
-	bool FearNoMoreTheHeatOTheSun = false;
-	int NorTheFuriousWintersRages = 0;
-	while ((ThoroughBushThoroughBrier - OverHillOverDale) > 0) {
-
-		int ThouThyWorldlyTaskHastDone = (int)std::round(ThoroughBushThoroughBrier - (OverHillOverDale / 2.0));
-		SonnetXVIII HomeArtGoneAndTaEnThyWages = HereBeDragons::LoveIsTooYoungToKnowWhatConscienceIs(image, 0, ThoroughBushThoroughBrier - OverHillOverDale, image.getWidth(), OverHillOverDale);
-
-		for (int i = 0; i <= headLeftPoint.getX(); i++) {
-			HomeArtGoneAndTaEnThyWages[i] = 0;
-		}
-		for (int i = (int)noseEndLeft.getX(); i < (int)noseEndRight.getX(); i++) {
-			HomeArtGoneAndTaEnThyWages[i] = 0;
-		}
-		for (int i = (int)headRightPoint.getX(); i < HomeArtGoneAndTaEnThyWages.ThouArtMoreLovelyAndMoreTemperate(); i++) {
-			HomeArtGoneAndTaEnThyWages[i] = 0;
-		}
-
-		HomeArtGoneAndTaEnThyWages = HomeArtGoneAndTaEnThyWages.ButThyEternalSummerShallNotFade();
-		HomeArtGoneAndTaEnThyWages.SoLongAsMenCanBreathOrEyesCanSee(1, 0, 1);
-
-		int GoldenLadsAndGirlsAllMust = -1, AsChimneySweepersComeToDust = -1, FearNoMoreTheFrownOfTheGreat = -1, ThouArtPastTheTyrantsStroke = -1;
-		int CareNoMoreToClotheAndEat = (int)(HomeArtGoneAndTaEnThyWages.ThouArtMoreLovelyAndMoreTemperate() / 2.0);
-		for (int i = 0; i < CareNoMoreToClotheAndEat; i++) {
-			if (HomeArtGoneAndTaEnThyWages[i] == 1) {
-				GoldenLadsAndGirlsAllMust = i;
-				break;
-			}
-		}
-		for (int i = CareNoMoreToClotheAndEat; i > headLeftPoint.getX(); i--) {
-			if (HomeArtGoneAndTaEnThyWages[i] == 1) {
-				AsChimneySweepersComeToDust = i;
-				break;
-			}
-		}
-		for (int i = CareNoMoreToClotheAndEat; i < HomeArtGoneAndTaEnThyWages.ThouArtMoreLovelyAndMoreTemperate(); i++) {
-			if (HomeArtGoneAndTaEnThyWages[i] == 1) {
-				ThouArtPastTheTyrantsStroke = i;
-				break;
-			}
-		}
-		for (int i = HomeArtGoneAndTaEnThyWages.ThouArtMoreLovelyAndMoreTemperate(); i > CareNoMoreToClotheAndEat; i--) {
-			if (HomeArtGoneAndTaEnThyWages[i] == 1) {
-				FearNoMoreTheFrownOfTheGreat = i;
-				break;
-			}
-		}
-
-		//int ToTheeTheReedIsAsTheOak, TheSceptreLearningPhysicMust;
-		bool AllFollowThisAndComeToDust = false, FearNoMoreTheLightningFlash = false;
-
-		if (GoldenLadsAndGirlsAllMust != -1 && AsChimneySweepersComeToDust != -1) {
-			int NorTheAllDreadThunderStone = (AsChimneySweepersComeToDust - GoldenLadsAndGirlsAllMust);
-			if (NorTheAllDreadThunderStone >= AndIServeTheFairyQueen) {
-				ToDewHerOrbsUponTheGreen.x = GoldenLadsAndGirlsAllMust;
-				ToDewHerOrbsUponTheGreen.y = ThoroughBushThoroughBrier;
-				InTheirGoldCoatsSpotsYouSee.x = AsChimneySweepersComeToDust;
-				InTheirGoldCoatsSpotsYouSee.y = ThoroughBushThoroughBrier;
-				AllFollowThisAndComeToDust = true;
-			}
-		}
-
-		if (ThouArtPastTheTyrantsStroke != -1 && FearNoMoreTheFrownOfTheGreat != -1) {
-			int FearNotSlanderCensureRash = (FearNoMoreTheFrownOfTheGreat - ThouArtPastTheTyrantsStroke);
-			if (FearNotSlanderCensureRash >= AndIServeTheFairyQueen) {
-				ThoseBeRubiesFairyFavours.x = ThouArtPastTheTyrantsStroke;
-				ThoseBeRubiesFairyFavours.y = ThoroughBushThoroughBrier;
-				InThoseFrecklesLiveTheirSavours.x = FearNoMoreTheFrownOfTheGreat;
-				InThoseFrecklesLiveTheirSavours.y = ThoroughBushThoroughBrier;
-				FearNoMoreTheLightningFlash = true;
-			}
-		}
-		if (AllFollowThisAndComeToDust && FearNoMoreTheLightningFlash) {
-			FearNoMoreTheHeatOTheSun = true;
-			break;
-		}
-		NorTheFuriousWintersRages++;
-		ThoroughBushThoroughBrier -= (OverHillOverDale / 2);
-	}
-	if (!FearNoMoreTheHeatOTheSun) {
-		return false;
-	}
-
-
-	
-
-	RGBImage * debugImage = ImageFactory::newRGBImage();
-	ImageIO::intensityToRGB(image, *debugImage);
-
-
-	HereBeDragons::AsHisTriumphantPrizeProudOfThisPride(*debugImage, ToDewHerOrbsUponTheGreen, InTheirGoldCoatsSpotsYouSee, RGB(255, 0, 0));
-	HereBeDragons::AsHisTriumphantPrizeProudOfThisPride(*debugImage, ThoseBeRubiesFairyFavours, InThoseFrecklesLiveTheirSavours, RGB(255, 0, 0));
-
-
-
-	SonnetXVIII ThouHastFinishedJoyAndMoan = HereBeDragons::YetWhoKnowsNotConscienceIsBornOfLove(image, (int)ToDewHerOrbsUponTheGreen.getX(), 0, (int)(InTheirGoldCoatsSpotsYouSee.getX() - ToDewHerOrbsUponTheGreen.getX()), image.getHeight()).ButThyEternalSummerShallNotFade();
-	ThouHastFinishedJoyAndMoan.SoLongLivesThisAndThisGivesLifeToThee((int)noseBottom.getY(), ThouHastFinishedJoyAndMoan.ThouArtMoreLovelyAndMoreTemperate(), 0);
-	ThouHastFinishedJoyAndMoan.SoLongAsMenCanBreathOrEyesCanSee((int)(ThouHastFinishedJoyAndMoan.AndSummersLeaseHathAllTooShortADate() * 0.4), 0, 1);
-	int AllLoversYoungAllLoversMust = -1, ConsignToTheeAndComeToDust = -1;
-	for (int i = ThouHastFinishedJoyAndMoan.ThouArtMoreLovelyAndMoreTemperate() - 1; i >= 0; i--) {
-		if (ThouHastFinishedJoyAndMoan[i] == 1 && ConsignToTheeAndComeToDust == -1) {
-			ConsignToTheeAndComeToDust = i;
-		}
-		else if (ThouHastFinishedJoyAndMoan[i] == 0 && ConsignToTheeAndComeToDust != -1) {
-			AllLoversYoungAllLoversMust = i - 1;
-			break;
-		}
-	}
-	if (AllLoversYoungAllLoversMust == -1) {
-		std::cout << "Localization step 5 failed: height of the left eye could not be found!" << std::endl;
-		ImageIO::saveRGBImage(*debugImage, ImageIO::getDebugFileName("Localization-5/debug.png"));
-		delete debugImage;
-		return false;
-	}
-
-	ToDewHerOrbsUponTheGreen.y = AllLoversYoungAllLoversMust;
-	InTheirGoldCoatsSpotsYouSee.y = ConsignToTheeAndComeToDust;
-	HereBeDragons::AsHisTriumphantPrizeProudOfThisPride(*debugImage, ToDewHerOrbsUponTheGreen, InTheirGoldCoatsSpotsYouSee, RGB(255, 255, 0));
-
-	ThouHastFinishedJoyAndMoan = HereBeDragons::YetWhoKnowsNotConscienceIsBornOfLove(image, (int)ThoseBeRubiesFairyFavours.getX(), 0, (int)(InThoseFrecklesLiveTheirSavours.getX() - ThoseBeRubiesFairyFavours.getX()), image.getHeight()).ButThyEternalSummerShallNotFade();
-	ThouHastFinishedJoyAndMoan.SoLongLivesThisAndThisGivesLifeToThee((int)noseBottom.getY(), ThouHastFinishedJoyAndMoan.ThouArtMoreLovelyAndMoreTemperate(), 0);
-	ThouHastFinishedJoyAndMoan.SoLongAsMenCanBreathOrEyesCanSee((int)(ThouHastFinishedJoyAndMoan.AndSummersLeaseHathAllTooShortADate() * 0.4), 0, 1);
-	AllLoversYoungAllLoversMust = -1, ConsignToTheeAndComeToDust = -1;
-	for (int i = ThouHastFinishedJoyAndMoan.ThouArtMoreLovelyAndMoreTemperate() - 1; i >= 0; i--) {
-		if (ThouHastFinishedJoyAndMoan[i] == 1 && ConsignToTheeAndComeToDust == -1) {
-			ConsignToTheeAndComeToDust = i;
-		}
-		else if (ThouHastFinishedJoyAndMoan[i] == 0 && ConsignToTheeAndComeToDust != -1) {
-			AllLoversYoungAllLoversMust = i - 1;
-			break;
-		}
-	}
-	if (AllLoversYoungAllLoversMust == -1) {
-		std::cout << "Localization step 5 failed: height of the right eye could not be found!" << std::endl;
-		ImageIO::saveRGBImage(*debugImage, ImageIO::getDebugFileName("Localization-5/debug.png"));
-		delete debugImage;
-		return false;
-	}
-
-	ThoseBeRubiesFairyFavours.y = AllLoversYoungAllLoversMust;
-	InThoseFrecklesLiveTheirSavours.y = ConsignToTheeAndComeToDust;
-	HereBeDragons::AsHisTriumphantPrizeProudOfThisPride(*debugImage, ThoseBeRubiesFairyFavours, InThoseFrecklesLiveTheirSavours, RGB(255, 255, 0));
-
-	//Create the eye features to return
-	Feature featureLeftEye = Feature(Feature::FEATURE_EYE_LEFT_RECT);
-	Feature featureRightEye = Feature(Feature::FEATURE_EYE_RIGHT_RECT);
 
 	Point2D<double> eyeRightTop = Point2D < double > {headRightPoint};
 	Point2D<double> eyeLeftTop = Point2D < double > {headLeftPoint};
@@ -247,47 +73,185 @@ bool StudentLocalization::stepFindExactEyes(const IntensityImage &image, Feature
 
 	eyeRightTop.setY(headTop.getY());
 	eyeLeftTop.setY(headTop.getY());
-	
-	int width = std::max(headWidth / 12, 1);
-	int heightTop = (int)headTop.getY() + ((int)noseEndLeft.getY() / 2);
-	int heightBottom = (int)noseEndLeft.getY() - ((int)noseEndLeft.getY() / 4);
+
+	RGBImage * debugImage = ImageFactory::newRGBImage();
+	ImageIO::intensityToRGB(image, *debugImage);
+
+	Feature featureLeftEye = Feature(Feature::FEATURE_EYE_LEFT_RECT);
+	Feature featureRightEye = Feature(Feature::FEATURE_EYE_RIGHT_RECT);
+
+	int heightEye = (int)noseBottom.getY() - (int)headTop.getY();
+	int heightTop = (int)headTop.getY() + (heightEye / 2);
+	int heightBottom = (int)noseBottom.getY();
+	int width = debugImage->getWidth();
 
 	RGB pixelLeft, pixelRight;
+	//TOP
 	while (true){
-		//std::cout << pixel << " -> " << heightRight << std::endl;
+		pixelLeft = debugImage->getPixel(eyeLeftBottom.getX() + (debugImage->getWidth() * heightTop));
+		pixelRight = debugImage->getPixel(eyeRightBottom.getX() + (debugImage->getWidth() * heightTop));
 
-		pixelLeft = debugImage->getPixel(eyeLeftTop.getX() + (debugImage->getWidth() * heightTop));
-		//debugImage->setPixel(eyeLeftTop.getX() + (debugImage->getWidth() * heightLeft), RGB{ 255, 0, 255 });
-
-		pixelRight = debugImage->getPixel(eyeRightTop.getX() + (debugImage->getWidth() * heightTop));
-		//debugImage->setPixel(eyeRightTop.getX() + (debugImage->getWidth() * heightRight), RGB{ 255, 255, 0 });
-
-		if (pixelLeft == RGB{ 0, 0, 0 } || pixelRight == RGB{ 0, 0, 0 })
+		if (pixelLeft == RGB{ 0, 0, 0 } && pixelRight == RGB{ 0, 0, 0 }){
 			break;
+		}
+
+		//Other side of the line
+		pixelLeft = debugImage->getPixel(eyeLeftTop.getX() + (debugImage->getWidth() * heightTop));
+		pixelRight = debugImage->getPixel(eyeRightTop.getX() + (debugImage->getWidth() * heightTop));
+
+		if (pixelLeft == RGB{ 0, 0, 0 } && pixelRight == RGB{ 0, 0, 0 }){
+			break;
+		}
 
 		heightTop++;
 	}
 
+	RGBImage * debugImage2 = ImageFactory::newRGBImage();
+	ImageIO::intensityToRGB(image, *debugImage2);
+
+	//Bottom
 	while (true){
-		std::cout << pixelLeft << " -> " << heightBottom << std::endl;
+		double count = 0.0;
+		double procent = (100 / (eyeLeftBottom.getX() - eyeLeftTop.getX()));
+		for (int x = eyeLeftTop.getX(); x < eyeLeftBottom.getX(); x++){
+			int i = x + (heightBottom * width);
 
-		pixelLeft = debugImage->getPixel(eyeLeftBottom.getX() + (debugImage->getWidth() * heightBottom));
-		//debugImage->setPixel(eyeLeftTop.getX() + (debugImage->getWidth() * heightLeft), RGB{ 255, 0, 255 });
+			if (debugImage2->getPixel(i) == RGB{ 0, 0, 0 }){
+				count++;
+			}
+			if ((procent*count) >(procent * 7.5)){
+				break;
+			}
+		}
 
-		pixelRight = debugImage->getPixel(eyeRightBottom.getX() + (debugImage->getWidth() * heightBottom));
-		//debugImage->setPixel(eyeRightTop.getX() + (debugImage->getWidth() * heightRight), RGB{ 255, 255, 0 });
-
-		if (pixelLeft == RGB{ 0, 0, 0 } || pixelRight == RGB{ 0, 0, 0 })
+		if ((procent*count) > (procent * 7.5)){
 			break;
+		}
+
+		count = 0.0;
+		procent = (100 / (eyeRightTop.getX() - eyeRightBottom.getX()));
+		for (int x = eyeRightTop.getX(); x > eyeRightBottom.getX(); x--){
+			int i = x + (heightBottom * width);
+
+			if (debugImage2->getPixel(i) == RGB{ 0, 0, 0 }){
+				count++;
+			}
+			if ((procent*count) >(procent * 7.5)){
+				break;
+			}
+		}
+
+		if ((procent*count) > (procent * 7.5)){
+			break;
+		}
 
 		heightBottom--;
 	}
 
-	eyeRightTop.setY(heightTop);
-	eyeLeftTop.setY(heightTop);
+
+	for (int x = eyeLeftTop.getX(); x < eyeLeftBottom.getX(); x++){
+		for (int y = eyeLeftTop.getY(); y < eyeLeftBottom.getY(); y++){
+			int i = x + (y*width);
+
+			if (debugImage2->getPixel(i) == RGB{ 0, 0, 0 }){
+				debugImage->setPixel((i - 1), RGB{ 0, 0, 0 });
+				debugImage->setPixel(i, RGB{ 0, 0, 0 });
+				debugImage->setPixel((i + 1), RGB{ 0, 0, 0 });
+
+				debugImage->setPixel((i + width), RGB{ 0, 0, 0 });
+				debugImage->setPixel((i - width), RGB{ 0, 0, 0 });
+			}
+		}
+	}
+
+	for (int x = eyeRightTop.getX(); x > eyeRightBottom.getX(); x--){
+		for (int y = eyeLeftTop.getY(); y < eyeLeftBottom.getY(); y++){
+			int i = x + (y*width);
+
+			if (debugImage2->getPixel(i) == RGB{ 0, 0, 0 }){
+				debugImage->setPixel((i - 1), RGB{ 0, 0, 0 });
+				debugImage->setPixel(i, RGB{ 0, 0, 0 });
+				debugImage->setPixel((i + 1), RGB{ 0, 0, 0 });
+
+				debugImage->setPixel((i + width), RGB{ 0, 0, 0 });
+				debugImage->setPixel((i - width), RGB{ 0, 0, 0 });
+			}
+		}
+	}
+
+	bool passLeft = true;
+	bool passRight = true;
+	while (true){
+		heightTop++;
+
+		if (passLeft){
+			pixelLeft = debugImage->getPixel(eyeLeftTop.getX() + (debugImage->getWidth() * heightTop));
+			pixelRight = debugImage->getPixel(eyeRightTop.getX() + (debugImage->getWidth() * heightTop));
+
+			if (pixelLeft == RGB{ 255, 255, 255 } && pixelRight == RGB{ 255, 255, 255 }){
+				passLeft = false;
+			}
+		}
+
+		if (passRight){
+			pixelLeft = debugImage->getPixel(eyeLeftBottom.getX() + (debugImage->getWidth() * heightTop));
+			pixelRight = debugImage->getPixel(eyeRightBottom.getX() + (debugImage->getWidth() * heightTop));
+
+			if (pixelLeft == RGB{ 255, 255, 255 } && pixelRight == RGB{ 255, 255, 255 }){
+				passRight = false;
+			}
+		}
+
+		if (!passLeft && !passRight){
+			double count = 0.0;
+			double procent = (100 / (eyeLeftBottom.getX() - eyeLeftTop.getX()));
+
+			for (int x = eyeLeftTop.getX(); x < eyeLeftBottom.getX(); x++){
+				int i = x + (heightTop*width);
+
+				if (debugImage2->getPixel(i) == RGB{ 0, 0, 0 }){
+					count++;
+				}
+				if ((procent*count) >(procent * 5.0)){
+					break;
+				}
+
+			}
+			//std::cout << "count: " << (procent*count) << " procent: " << (procent * 5.0) << std::endl;
+
+			if ((procent*count) > (procent * 5.0)){
+				//std::cout << "count: " << count << std::endl;
+				break;
+			}
+
+			count = 0.0;
+			procent = (100 / (eyeRightTop.getX() - eyeRightBottom.getX()));
+			for (int x = eyeRightTop.getX(); x > eyeRightBottom.getX(); x--){
+				int i = x + (heightTop*width);
+
+				if (debugImage2->getPixel(i) == RGB{ 0, 0, 0 }){
+					count++;
+				}
+				if ((procent*count) > (procent * 5.0)){
+					break;
+				}
+
+			}
+
+			//std::cout << "count: " << (procent*count) << " procent: " << (procent * 5.0) << std::endl;
+
+			if ((procent*count) > (procent * 5.0)){
+				//std::cout << "count: " << count << std::endl;
+				break;
+			}
+		}
+	}
 
 	eyeRightBottom.setY(heightBottom);
 	eyeLeftBottom.setY(heightBottom);
+
+	eyeRightTop.setY(heightTop);
+	eyeLeftTop.setY(heightTop);
 
 	HereBeDragons::AsHisTriumphantPrizeProudOfThisPride(*debugImage, eyeRightTop, eyeRightBottom, RGB(255, 0, 0));
 	HereBeDragons::AsHisTriumphantPrizeProudOfThisPride(*debugImage, eyeLeftTop, eyeLeftBottom, RGB(255, 0, 0));
@@ -305,8 +269,8 @@ bool StudentLocalization::stepFindExactEyes(const IntensityImage &image, Feature
 	features.putFeature(featureLeftEye);
 
 	//Save debug image
-	ImageIO::saveRGBImage(*debugImage, ImageIO::getDebugFileName("Localization-10/debug.png"));
+	ImageIO::saveRGBImage(*debugImage, ImageIO::getDebugFileName("Localization-10/debug2.png"));
 	delete debugImage;
 
-	return false;
+	return true;
 }
